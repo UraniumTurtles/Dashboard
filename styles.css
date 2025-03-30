@@ -1,50 +1,120 @@
+/* Galaxy-themed styling */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #fff;
+    overflow-x: hidden; /* Prevent scrollbars caused by animations */
+}
+
+/* Starry background animation */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent url('https://i.imgur.com/bgK5fDa.png') repeat;
+    animation: moveStars 60s linear infinite;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
 }
 
 header {
-    background: #0073e6;
-    color: white;
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+    color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-    background: #005bb5;
+    background: rgba(0, 0, 0, 0.5);
     list-style: none;
-    padding: 0;
+    padding: 0.5rem;
     text-align: center;
     margin: 0;
+    border-radius: 10px;
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin: 0 15px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #ffd700;
     font-weight: bold;
+    text-shadow: 0px 0px 5px #ff4500;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    transform: scale(1.2);
+    text-shadow: 0px 0px 10px #fff;
 }
 
 main {
     padding: 2rem;
+    animation: fadeIn 2s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 h1, h2 {
-    color: #005bb5;
+    color: #ffcc33;
+    text-shadow: 0px 0px 10px #ff9900;
 }
 
 footer {
     text-align: center;
     padding: 1rem 0;
-    background: #0073e6;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
     color: white;
     margin-top: 2rem;
+    border-top: 2px solid #ffd700;
+}
+
+/* Additional glowing effect */
+a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff69b4;
+    text-shadow: 0px 0px 5px #ff69b4;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow: 0px 0px 5px #ff69b4;
+    }
+    50% {
+        text-shadow: 0px 0px 20px #ff1493;
+    }
+    100% {
+        text-shadow: 0px 0px 5px #ff69b4;
+    }
 }
