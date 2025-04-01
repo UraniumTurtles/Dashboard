@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>NOC Alert Ticket SOP</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Documentation/NinjaOneDoc.html">NinjaOne01</a></li>
+                        <li><a href="#monitoring">Monitoring</a></li>
+                        <li><a href="#alerting">Alerting</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>NOC Alert Ticket SOP</h1>
+
+    <h2>Table of Contents</h2>
+    <ul>
+        <li>Server/Workstation Alerts</li>
+        <li>Network Alerts</li>
+        <li>VMWare Alerts</li>
+    </ul>
+
+    <h2>Server/Workstation Alerts</h2>
+
+    <h3>Disk Space:</h3>
+    <ul>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>Run disk clean up on the affected drive.</li>
+        <li>Delete any unneeded files from the htadmin user’s documents and downloads.</li>
+        <li>Download and run TreeSize to determine what is taking up space.</li>
+        <li>NOC Technician will determine what can be deleted based on TreeSize report.</li>
+        <li>NOC Technician will escalate to Market Engineering to determine if space can or needs to be added.</li>
+    </ul>
+
+    <h3>CPU/Memory Utilization:</h3>
+    <ul>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>NOC Technician will evaluate and determine what process is taking up the resources and if it can be stopped/restarted.</li>
+        <li>If the issue is a repeated occurrence (3 or more time within a week) NOC Technician will check if AV or EDR is root cause.</li>
+        <li>If so, put in an exception.</li>
+        <li>NOC Technician will escalate to Market Engineering to determine if work needs done on the process that is causing high utilization or if the threshold needs increased on the alert.</li>
+        <li>If threshold needs increased NOC Techician will increase to an appropriate amount and put in the devices Notes the CW ticket # and what was adjusted.</li>
+        <li>If threshold has already been increased to 99% a discussion with Engineering and NOC will need to take place to ensure health of the server is alright and/or if work needs to be done.</li>
+    </ul>
+
+    <h3>User Added to Privileged Group</h3>
+    <ul>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>NOC Technician will evaluate information from alert to determine if user was legitimately added or not.</li>
+        <li>If htadmin/htms or client, IT admin has added the user this is more then likely a legitimate action.</li>
+        <li>If this has been determined to be unauthorized
+            <ul>
+                <li>Disable user account.</li>
+                <li>Notify Jason F. and Andrew K.</li>
+                <li>Call POC of client (idk who will do that probably a manager)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Patching</h3>
+    <ul>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>Work patching issue as normal to get patch installed.</li>
+        <li>Once patch is installed let Ninja go through its patch scan, so it recognizes the patch has been installed.</li>
+        <li>NOC Technician will change ticket status from ‘NOC Working Issue Now’ to ‘Closed’.</li>
+        <li>NOC Technician will reset the condition in Ninja on the endpoint.</li>
+    </ul>
+
+    <h2>Network Alerts</h2>
+
+    <h3>CPU/Memory Utilization:</h3>
+    <ul>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>If the issue is a repeated occurrence (3 or more time within a week) NOC Technician will escalate to Market Engineering to determine if the device needs replaced or if the alert can be suppressed.</li>
+        <li>NOC Technician will change the devices policy to the &lt;device&gt; Up Down policy to only alert on up down.</li>
+    </ul>
+
+    <h3>NMS Agent/Server Down:</h3>
+    <ul>
+        <li>NOC Technician will bundle the NMS Agent ticket to the Server down ticket with the server down ticket being the parent ticket.</li>
+        <li>NOC Technician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>NOC Technician will attempt to get the server back online.</li>
+        <li>NOC Technician will escalate to Market Engineering if onsite is required to bring server back online.</li>
+    </ul>
+
+    <h2>VMWare Alerts</h2>
+
+    <h3>Datastore Utilization:</h3>
+    <ul>
+        <li>NOC Techician will change ticket status from ‘New’ to ‘NOC Working Issue Now’.</li>
+        <li>Make sure no snapshots are present.</li>
+        <li>Escalate to TS to have them check if anything can be cleaned up.</li>
+        <li>If not raise threshold in the alert.</li>
+    </ul>
+
+    <h3>Snapshot Lifespan</h3>
+    <ul>
+        <li>NOC Technician will escalate to Market Engineering to determine if snap can be deleted or if it’s still needed.</li>
+    </ul>
+
+</body>
+</html>
