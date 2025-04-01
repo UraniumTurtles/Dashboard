@@ -1,0 +1,106 @@
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NinjaOne01</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Monitoring System Setup</h1>
+
+    <h2>1. Parent Policies</h2>
+    <p>Parent policies encompass all conditions and scripts/automations necessary for the monitoring system. These policies ensure that the system operates efficiently and effectively.</p>
+
+    <h3>1.1 Conditions</h3>
+    <ul>
+        <li>Define the criteria for monitoring various network devices and systems.</li>
+        <li>Specify thresholds for alerts and notifications.</li>
+        <li>Establish rules for normal and abnormal behavior.</li>
+    </ul>
+
+    <h3>1.2 Scripts/Automations</h3>
+    <ul>
+        <li>Automate routine monitoring tasks to reduce manual intervention.</li>
+        <li>Implement scripts for data collection, analysis, and reporting.</li>
+        <li>Ensure scripts are regularly updated and maintained.</li>
+    </ul>
+
+    <h2>2. Child Policies</h2>
+    <p>Child policies are specialized policies based on specific needs such as patching and AV/EDR (Antivirus/Endpoint Detection and Response).</p>
+
+    <h3>2.1 Patching Policies</h3>
+    <ul>
+        <li>Schedule regular patching windows.</li>
+        <li>Define critical and non-critical patches.</li>
+        <li>Automate patch deployment and verification.</li>
+    </ul>
+
+    <h3>2.2 AV/EDR Policies</h3>
+    <ul>
+        <li>Set up real-time monitoring for malware and threats.</li>
+        <li>Define response actions for detected threats.</li>
+        <li>Regularly update AV/EDR definitions and rules.</li>
+    </ul>
+
+    <h2>3. Network Monitoring System (NMS)</h2>
+    <p>The NMS is set up on a central server to monitor all network devices. This centralization ensures comprehensive visibility and control.</p>
+
+    <h3>3.1 Central Server Configuration</h3>
+    <ul>
+        <li>Install and configure NMS software on the central server.</li>
+        <li>Ensure the server has adequate resources (CPU, memory, storage).</li>
+        <li>Set up secure access controls and user permissions.</li>
+    </ul>
+
+    <h3>3.2 Device Monitoring</h3>
+    <ul>
+        <li>Add all network devices to the NMS.</li>
+        <li>Configure device-specific monitoring parameters.</li>
+        <li>Set up dashboards and reports for real-time monitoring.</li>
+    </ul>
+
+    <h2>4. Overrides</h2>
+    <p>Any overrides must have a note on the device explaining the reason for the override, along with a supporting ticket number.</p>
+
+    <h3>4.1 Documentation of Overrides</h3>
+    <ul>
+        <li>Create a standardized format for override notes.</li>
+        <li>Ensure each note includes the reason for the override and the ticket number.</li>
+        <li>Regularly review and audit overrides for compliance.</li>
+    </ul>
+
+    <h2>5. After-Hours Alerts</h2>
+    <p>After-hours alerts are managed based on severity and client requirements. Alerts are sent to a corporate email, which is then forwarded to an answering service.</p>
+
+    <h3>5.1 Severity-Based Alerts</h3>
+    <ul>
+        <li>Define alert severity levels (e.g., critical, high, medium, low).</li>
+        <li>Configure alert thresholds for each severity level.</li>
+        <li>Ensure critical alerts are prioritized for immediate action.</li>
+    </ul>
+
+    <h3>5.2 Client-Based Alerts</h3>
+    <ul>
+        <li>Customize alert settings based on client requirements.</li>
+        <li>Ensure client-specific alerts are routed appropriately.</li>
+        <li>Maintain a contact list for after-hours support.</li>
+    </ul>
+
+    <h3>5.3 Email Forwarding</h3>
+    <ul>
+        <li>Set up a corporate email for receiving alerts.</li>
+        <li>Configure email forwarding to the answering service.</li>
+        <li>Ensure the answering service is equipped to handle alerts promptly.</li>
+    </ul>
+
+</body>
+</html>
+"""
+
+# Save the HTML content to a file
+with open("monitoring_system_setup.html", "w") as file:
+    file.write(html_content)
+
+print("The document has been successfully converted to HTML format and saved as 'monitoring_system_setup.html'.")
