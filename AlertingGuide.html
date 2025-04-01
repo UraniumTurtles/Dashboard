@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerting Setup in NinjaOne Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Alerting Setup in NinjaOne Platform</h1>
+
+    <h2>1. API Integration for Tickets</h2>
+    <p>The API integration for tickets in NinjaOne is configured as a one-way integration. This means that:</p>
+    <ul>
+        <li>Closing a ticket in ConnectWisePSA does not clear the condition in NinjaOne.</li>
+        <li>Clearing the condition in NinjaOne will automatically close the corresponding ticket in ConnectWisePSA.</li>
+    </ul>
+
+    <h2>2. Alert Changes</h2>
+    <p>Alert changes that are not specific to a single device override must be made at the Parent policy level. This ensures consistency and centralized management of alert configurations.</p>
+
+    <h3>2.1 Parent Policy Level Changes</h3>
+    <ul>
+        <li>All global alert settings and modifications should be applied at the Parent policy level.</li>
+        <li>This includes changes to alert thresholds, notification settings, and response actions.</li>
+    </ul>
+
+    <h2>3. Alert Criteria</h2>
+    <p>Alerts in NinjaOne are based on various criteria, including hardware metrics, time-based conditions, Windows Events, script output evaluations, software installations, and custom fields.</p>
+
+    <h3>3.1 Hardware Metrics and Time</h3>
+    <ul>
+        <li>Example: CPU usage at 90% for 15 minutes.</li>
+        <li>Configure alerts to trigger based on sustained hardware performance metrics.</li>
+    </ul>
+
+    <h3>3.2 Windows Events</h3>
+    <ul>
+        <li>Monitor specific Windows Event IDs and trigger alerts based on their occurrence.</li>
+        <li>Customize event-based alerts to match critical system events.</li>
+    </ul>
+
+    <h3>3.3 Script Output Evaluation</h3>
+    <ul>
+        <li>Run scripts to evaluate system conditions and trigger alerts based on the output.</li>
+        <li>Example: A script that checks disk space and triggers an alert if space is below a certain threshold.</li>
+    </ul>
+
+    <h3>3.4 Software Installed</h3>
+    <ul>
+        <li>Set up alerts for the installation or uninstallation of specific software.</li>
+        <li>Monitor changes in software inventory and trigger alerts accordingly.</li>
+    </ul>
+
+    <h3>3.5 Custom Fields</h3>
+    <ul>
+        <li>Use custom fields to define specific conditions for alerts.</li>
+        <li>Example: Monitoring custom attributes like warranty expiration dates and triggering alerts based on those fields.</li>
+    </ul>
+
+</body>
+</html>
