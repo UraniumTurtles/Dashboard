@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Maintenance Mode: High Touch ITS SOP</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Menu</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Documentation/NinjaOneDoc.html">NinjaOne01</a></li>
+                        <li><a href="#monitoring">Monitoring</a></li>
+                        <li><a href="#alerting">Alerting</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Ninja Maintenance Mode: High Touch ITS SOP</h1>
+
+    <h2>Purpose</h2>
+    <p>This document will detail the High Touch procedure for setting a Maintenance window for a Ninja device or set of devices. This can include servers or network devices.</p>
+
+    <h2>Reasons for a Maintenance window:</h2>
+    <ul>
+        <li>Planned device maintenance which would cause that device to lose network connectivity or generate OS errors.</li>
+        <li>Known upcoming power or network outage.</li>
+        <li>Replacing or removing hardware.</li>
+        <li>Decommissioning of devices (in those cases we want to shut a server down for example for a few weeks before completely removing).</li>
+    </ul>
+
+    <p>Ninja help documentation for Maintenance Mode (for details on how to set Maintenance on a device or set of devices):</p>
+    <p><a href="https://ninjarmm.zendesk.com/hc/en-us/articles/360051137451-Maintenance-Mode">Maintenance Mode</a></p>
+
+    <h2>High Touch Specific Procedures to Follow:</h2>
+    <ul>
+        <li>Only suppress Condition based alerting when setting the maintenance window.</li>
+        <li>There will be exceptions where we want to disable other features such as scripting but generally, we only want to suppress alerting during maintenance. Leaving the other boxes unchecked allows us to still patch, protect with AV, and use scripts on this device if needed.</li>
+        <li>Do not set the End Date & Time on a Maintenance window to Never. Please assign a safe date and time in the future when we want alerting to resume on the device.</li>
+        <li>Leaving a maintenance window wide open with no end date is not necessary in nearly every case. This will just invite scenarios where we need alerting on the device and the maintenance window never ends because a date was not set.</li>
+        <li>This includes server decommissions. We should have an idea on when we want to remove an old server completely so, please set the date to that window. If we are unsure how long a server may be left shutdown, please pick a date safely in the future. This at least allows us to review why a server is shutdown should that window expire, and an alert be triggered. This can be a helpful reminder we need to remove a decommissioned server vs. leaving it with no end date and the server ends up being in Ninja for months unnecessarily.</li>
+        <li>If shutting down a server for a length of time more than a day, please add a NOTE to that device on why it’s being put in Maintenance Window and please include a service or project ticket in the note. Notes can be created from the main Dashboard page of the device:</li>
+    </ul>
+
+</body>
+</html>
