@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Onboarding Checklist & Procedures</title>
+</head>
+<body>
+    <h1>Onboarding Checklist & Procedures</h1>
+
+    <h2>Checklist</h2>
+    <ul>
+        <li>Create/Verify Creation of ITGlue Site
+            <ul>
+                <li>See Procedure Below</li>
+            </ul>
+        </li>
+        <li>Create/Verify QuickPass Password Rotation
+            <ul>
+                <li>See Procedure and Links Below</li>
+            </ul>
+        </li>
+        <li>Create Ninja Site
+            <ul>
+                <li>Migration Steps.docx (This doc explains the NMS/Daily Active Directory Scan Set up)</li>
+                <li>How To Install NinjaOne on MacOS - Copy.docx</li>
+            </ul>
+        </li>
+        <li>Create ArmorPoint Site
+            <ul>
+                <li>See Procedure Below</li>
+            </ul>
+        </li>
+        <li>Set up Email Security with Barracuda
+            <ul>
+                <li>Barracuda Email Security SOP.docx</li>
+                <li>Helpful Links.docx</li>
+                <li>Example DNS Creds Request Email.docx</li>
+            </ul>
+        </li>
+        <li>Create Datto SAAS Site
+            <ul>
+                <li>See Procedure Below</li>
+            </ul>
+        </li>
+        <li>Set up Backup Site/Deploy Agents
+            <ul>
+                <li>Datto
+                    <ul>
+                        <li>Datto Standards and Exceptions.docx</li>
+                        <li>Helpful Links Datto.docx</li>
+                    </ul>
+                </li>
+                <li>Axcient
+                    <ul>
+                        <li>Axcient Direct to Cloud Procedure.docx</li>
+                        <li>Helpful Links.docx</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>Create Liongard Environment/Deploy Agent</li>
+        <li>Check Firmware for Potential Upgrades for Network Devices, Servers, VCenter, etc.</li>
+        <li>Send Final Device Counts from tracking spreadsheet to PMO.</li>
+    </ul>
+
+    <h2>Procedures</h2>
+    <h3>Create/Verify Creation of ITGlue Site</h3>
+    <p>This will mostly be a verification, if no site is set up get with TS/Lead Project Manager to get site created.</p>
+
+    <h3>Create/Verify QuickPass Password Rotation</h3>
+    <ol>
+        <li>Select “Add Account” in the top right corner.</li>
+        <li>Set to Manual.</li>
+        <li>Select Active Directory.</li>
+        <li>Select OU you need.</li>
+        <li>Search HTADMIN.</li>
+        <li>Check and add (it should autofill password, if not find credentials in ITGlue and put in password).</li>
+        <li>SAVE.</li>
+        <li>Hit switch for password rotation to start.</li>
+    </ol>
+    <p>5AM-6AM is when rotation happens.</p>
+    <p><a href="https://support.getquickpass.com/hc/en-us/articles/360041779654-Start-Here-Quickpass-On-boarding">Quickpass On-boarding</a></p>
+    <p><a href="https://support.getquickpass.com/hc/en-us/articles/360035206994-How-to-install-the-Agent-Manual-and-Silent">How to install the Agent</a></p>
+
+    <h3>Create ArmorPoint Site</h3>
+    <p>Fenoglio will create the site for now. Keep track of the number of endpoints coming in and push install scripts when possible.</p>
+
+    <h3>Create Datto SAAS Site</h3>
+    <ol>
+        <li>Select Status Tab at the top of the page.</li>
+        <li>SaaS Protection Status.</li>
+        <li>Create Client.</li>
+        <li>Configure with month-to-month infinite settings.</li>
+        <li>Leave all other defaults.</li>
+        <li>Be sure the client is set to NO license caps.</li>
+        <li>Agree and Add SaaS Protection Client.</li>
+    </ol>
+    <p>Will require credentials for O365 from ITGlue.</p>
+    <p>Once set up, the client will take a few days to completely ingest services, be patient and expect a few days of false errors until the ingesting period is complete.</p>
+
+    <h3>Configure Firewall Management (In GMS or FortiManager)</h3>
+    <p>Confirm the Licensing is up to date.</p>
+    <p>Trusted Hosts:</p>
+    <ul>
+        <li>Host 1 will be local IP or can create more lines in case of multiple VLANS.</li>
+        <li>Host 2-6 is Corp offices.</li>
+        <li>Host 7 is in case of VPNs.</li>
+    </ul>
+
+    <h3>Configure/Setup Wireless AP and Controllers</h3>
+</body>
+</html>
