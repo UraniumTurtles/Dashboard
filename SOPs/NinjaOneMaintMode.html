@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninja Maintenance Mode: High Touch ITS SOP</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../dark-mode.css">
 </head>
 <body>
     <header>
@@ -41,10 +41,12 @@
     <h2>High Touch Specific Procedures to Follow:</h2>
     <ul>
         <li>Only suppress Condition based alerting when setting the maintenance window.</li>
-        <li>There will be exceptions where we want to disable other features such as scripting but generally, we only want to suppress alerting during maintenance. Leaving the other boxes unchecked allows us to still patch, protect with AV, and use scripts on this device if needed.</li>
+        <li>There will be exceptions where we want to disable other features such as scripting but generally, we only want to suppress alerting during maintenance.</li>
+        <li>Leaving the other boxes unchecked allows us to still patch, protect with AV, and use scripts on this device if needed.</li>
         <li>Do not set the End Date & Time on a Maintenance window to Never. Please assign a safe date and time in the future when we want alerting to resume on the device.</li>
         <li>Leaving a maintenance window wide open with no end date is not necessary in nearly every case. This will just invite scenarios where we need alerting on the device and the maintenance window never ends because a date was not set.</li>
-        <li>This includes server decommissions. We should have an idea on when we want to remove an old server completely so, please set the date to that window. If we are unsure how long a server may be left shutdown, please pick a date safely in the future. This at least allows us to review why a server is shutdown should that window expire, and an alert be triggered. This can be a helpful reminder we need to remove a decommissioned server vs. leaving it with no end date and the server ends up being in Ninja for months unnecessarily.</li>
+        <li>This includes server decommissions. We should have an idea on when we want to remove an old server completely so, please set the date to that window. If we are unsure how long a server may be left shutdown, please pick a date safely in the future.</li>
+        <li>This at least allows us to review why a server is shutdown should that window expire, and an alert be triggered. This can be a helpful reminder we need to remove a decommissioned server vs. leaving it with no end date and the server ends up being in Ninja for months unnecessarily.</li>
         <li>If shutting down a server for a length of time more than a day, please add a NOTE to that device on why it’s being put in Maintenance Window and please include a service or project ticket in the note. Notes can be created from the main Dashboard page of the device:</li>
     </ul>
 
