@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Ninja API Script Setup</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Menu</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Documentation/NinjaOneDoc.html">NinjaOne01</a></li>
+                    <li><a href="#monitoring">Monitoring</a></li>
+                    <li><a href="#alerting">Alerting</a></li>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>Ninja API Script Setup</h1>
+
+    <p>API scripts are run on <strong>noc-mgmt (temp)</strong>.</p>
+    <p>It has the device role <strong>"NOC Workstation"</strong> which has role-based custom fields assigned to it.</p>
+    <p>Those custom fields are <strong>"ClientID"</strong> and <strong>"Client secret"</strong>, both are security type.</p>
+    <p>API scripts run on the machine will decrypt those two fields and use them to connect to NinjaOne's API to pull info from our instance of NinjaOne.</p>
+    <p>The credentials are wiped right after use on the machine.</p>
+    <p>The scripts utilize <strong>PowerShell v7</strong> and also <strong>Luke Whitelock's NinjaOne Documentation PowerShell module</strong>.</p>
+    can be found at <a href="https://docs.mspp.io/">https://docs.mspp.io/</a>.</p>
+
+    <footer>
+        <p>&copy; 2025 High Touch Technologies Network Operations Team</p>
+    </footer>
+</body>
+</html>
